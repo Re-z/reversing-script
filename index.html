@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reevrsing-script</title>
+</head>
+<body>
+    <input type="text" placeholder="type a word">
+    <script>
+        let input = document.querySelector('input');
+        input.addEventListener('blur', () => {
+            if(input.value) {
+                let val = Array.from(input.value);
+                let valReverse = [...val].reverse();
+                
+            
+                for(let i = 0; i < val.length; i++) {
+                if(val[i] === valReverse[i]) {
+                    if(i === val.length - 1) {
+                    alert('YES!!');
+                    }
+                    continue
+                }
+                else {
+                    alert('NO!!!');
+                    break;
+                }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
